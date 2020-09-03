@@ -1,0 +1,30 @@
+dialect "java"
+global java.util.Map userMap
+import com.cfg.drool.UserInfo
+rule "rule01"
+    salience 99
+    when
+        $d : Double()
+        eval($d==1)
+    then
+        System.out.println("========================"+$d);
+end
+
+rule "rule02"
+    salience 88
+    when
+        eval(11 >10)
+    then
+        System.out.println("========================"+userMap.get("age"));
+        userMap.put("score","100");
+end
+
+rule "rule03"
+    salience 80
+    when
+        $userinfo: UserInfo()
+        eval($userinfo.getScore() >10)
+    then
+        System.out.println("========================"+$userinfo.getScore().toString());
+        $userinfo.setScore(300);
+end
