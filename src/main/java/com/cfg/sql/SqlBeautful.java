@@ -23,7 +23,7 @@ public class SqlBeautful {
        String beautfulSql =  SQLUtils.format("select id, name as '姓名', age as '年龄', sex '性别', birthday from student s left join classroom c on s.classroom_id = c.id left join teacher t on s.chinese_id = t.id where s.name = 'a' ", "oracle");
         System.out.println(beautfulSql);
 
-       DataSource dataSource = initDruidDataSource();
+       //DataSource dataSource = initDruidDataSource();
         //通过druid jdbcUtil工具类执行查询
         //List<Map<String,Object>> result = JdbcUtils.executeQuery(conn,sql,paramList);
         //为sql添加条件
@@ -32,10 +32,10 @@ public class SqlBeautful {
         //PagerUtils.limit()
         String sql = PagerUtils.limit("select * from common_user","oracle",1,10);
         System.out.println(sql);
-        List<Map<String,Object>> result = JdbcUtils.executeQuery(dataSource,sql);
+        /*List<Map<String,Object>> result = JdbcUtils.executeQuery(dataSource,sql);
         for (Map<String, Object> stringObjectMap : result) {
             System.out.println(stringObjectMap);
-        }
+        }*/
 
     }
 
