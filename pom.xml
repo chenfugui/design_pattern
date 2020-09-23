@@ -124,6 +124,16 @@
             <artifactId>fast-drools-spring-boot-starter</artifactId>
             <version>7.37.0.Final</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.200</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
         <!--drools规则引擎-->
 <!--        <dependency>
             <groupId>org.drools</groupId>
